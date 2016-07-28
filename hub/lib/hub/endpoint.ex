@@ -36,7 +36,7 @@ defmodule BitEnvoy.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_hub_key",
-    signing_salt: "HOhTw7jI"
+    signing_salt: "gRlkd/EB"
 
   plug BitEnvoy.Router
 end

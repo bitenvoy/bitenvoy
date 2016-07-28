@@ -35,9 +35,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :hub, BitEnvoy.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "hub_dev",
-  hostname: "localhost",
+  adapter: Sqlite.Ecto,
+  database: "db/hub_dev.sqlite",
   pool_size: 10

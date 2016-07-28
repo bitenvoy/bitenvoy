@@ -13,7 +13,7 @@ config :hub,
 # Configures the endpoint
 config :hub, BitEnvoy.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "7z6Klu1IwKRFLOpMelZiNnOJ9SNpxYJGKkB2ORCPGKYYjJ4lYZTWW/vmEqqtXVNL",
+  secret_key_base: "at3gCcoR9ABnEX3R3/8rZWiTNcCa0LwRuXeP6jTjlpjLtbFluEcwaJyKKx1AqOGM",
   render_errors: [view: BitEnvoy.ErrorView, accepts: ~w(html json)],
   pubsub: [name: BitEnvoy.PubSub,
            adapter: Phoenix.PubSub.PG2]
