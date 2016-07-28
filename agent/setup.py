@@ -29,7 +29,7 @@ setup(
     packages=find_packages(),
     test_suite='bitenvoy.tests',
     install_requires=install_requires,
-    tests_require=['behave==1.2.5', 'PyHamcrest==1.9.0'],
+    tests_require=['behave==1.2.6.dev0', 'PyHamcrest==1.9.0'],
     cmdclass={
         'behave_test': behave_test
     },
