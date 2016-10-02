@@ -3,7 +3,7 @@ defmodule BitEnvoyHub.UserSocket do
 
   ## Channels
   # channel "room:*", BitEnvoyHub.RoomChannel
-
+  channel "monitor:lobby", BitEnvoyHub.MonitorChannel
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
   # transport :longpoll, Phoenix.Transports.LongPoll

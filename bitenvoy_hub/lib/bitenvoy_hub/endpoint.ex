@@ -1,6 +1,11 @@
 defmodule BitEnvoyHub.Endpoint do
   use Phoenix.Endpoint, otp_app: :bitenvoy_hub
-
+  
+  #socket call here creates two endpoints
+  #/socket/websocket
+  #/socket/longpoll
+  #if you're building your own endpoint you'll need to target
+  ##the appropriae one
   socket "/socket", BitEnvoyHub.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.

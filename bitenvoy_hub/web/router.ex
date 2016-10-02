@@ -15,12 +15,11 @@ defmodule BitEnvoyHub.Router do
 
   scope "/", BitEnvoyHub do
     pipe_through :browser # Use the default browser stack
-
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", BitEnvoyHub do
-  #   pipe_through :api
-  # end
+  scope "/api", BitEnvoyHub do
+    pipe_through :api
+    resources "/events", EventController, except: [:new, :edit]
+  end
 end
