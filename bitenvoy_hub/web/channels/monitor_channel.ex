@@ -1,5 +1,7 @@
 defmodule BitEnvoyHub.MonitorChannel do
   use BitEnvoyHub.Web, :channel
+  alias BitEnvoyHub.Event
+
 
   def join("monitor:lobby", payload, socket) do
     if authorized?(payload) do
@@ -19,6 +21,17 @@ defmodule BitEnvoyHub.MonitorChannel do
   # broadcast to everyone in the current topic (monitor:lobby).
   def handle_in("shout", payload, socket) do
     broadcast socket, "shout", payload
+    {:noreply, socket}
+  end
+ 
+
+  #tk test 
+  def handle_in("hello", payload, socket) do
+    broadcast socket, "shout", payload
+
+    test_event = %Event{name: "Hello"}
+    Repo.insert!(test_event)
+
     {:noreply, socket}
   end
 
