@@ -4,6 +4,7 @@ To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
   * Start a Postgres database with `docker run --name postgres -p5432:5432 -d postgres`
+  * Create your `migrations` directory if it doesn't exist with `mkdir -p priv/repo/migrations`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `npm install`
   * Start Phoenix endpoint with `mix phoenix.server`
