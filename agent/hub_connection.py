@@ -64,4 +64,4 @@ class HubConnection():
     print("=======SENDING CONNECT PAYLOAD=========")
     data =  {'topic':"monitor:lobby", 'event':"phx_join", 'payload':{}, 'ref':None}
     s.ws.send(json.dumps(data))
-
+    s.hello()

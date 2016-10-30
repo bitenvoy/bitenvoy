@@ -11,6 +11,12 @@ defmodule BitEnvoyHub.MonitorChannel do
     end
   end
 
+  #Join the monitoring channel for a deployable 
+  def join("monitor:"<> deployable_id, payload, socket) do
+        {:error, %{reason: "not implemented"}}
+  end
+
+
   # Channels can be used in a request/response fashion
   # by sending replies to requests from the client
   def handle_in("ping", payload, socket) do
@@ -28,7 +34,7 @@ defmodule BitEnvoyHub.MonitorChannel do
   #tk test 
   def handle_in("hello", payload, socket) do
     broadcast socket, "shout", payload
-
+    
     test_event = %Event{name: "Hello"}
     Repo.insert!(test_event)
 

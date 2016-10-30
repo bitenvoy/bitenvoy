@@ -7,7 +7,7 @@ defmodule BitEnvoyHub.Event do
     field :state, :integer
     field :started, Ecto.DateTime
     field :completed, Ecto.DateTime
-
+    belongs_to :deployables,  BitEnvoyHub.Deployable
     timestamps()
   end
 

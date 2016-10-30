@@ -21,5 +21,7 @@ defmodule BitEnvoyHub.Router do
   scope "/api", BitEnvoyHub do
     pipe_through :api
     resources "/events", EventController, except: [:new, :edit]
+    resources "/deployables", DeployableController, except: [:new, :edit]
+
   end
 end
